@@ -82,7 +82,7 @@ const TodoList = () => {
           </div>
 
           {/* ----To DO List----- */}
-          <div>
+          <div className='overflow-y-auto max-h-80'>
             {todoList.map((item, index) => (
               <TodoItems
                 key={index}
