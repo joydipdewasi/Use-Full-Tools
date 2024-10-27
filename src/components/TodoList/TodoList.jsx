@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import TOdoList from '../../assets/TOdoList.gif';
+import TOdoList from '../../assets/TodoList.gif';
 import TodoItems from './TodoItems';
 
 const TodoList = () => {
   // Reference for the input element
   const inputRef = useRef();
 
-  const [todoList, settodoLists] = useState(localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : []);  //local storage a data store korar jonno
+  const [todoList, settodoLists] = useState(
+    localStorage.getItem('todos')
+      ? JSON.parse(localStorage.getItem('todos'))
+      : []
+  ); //local storage a data store korar jonno
 
   // Function to add task
   const add = () => {
@@ -28,7 +32,9 @@ const TodoList = () => {
 
   // ------Delete Todo-----
   const deleteTodo = (id) => {
-    settodoLists((prevTodos) =>{ return prevTodos.filter((todo) => todo.id !== id)});
+    settodoLists((prevTodos) => {
+      return prevTodos.filter((todo) => todo.id !== id);
+    });
   };
 
   // -----toggleTodo-----
@@ -44,12 +50,11 @@ const TodoList = () => {
     });
   };
 
-  // local storage 
+  // local storage
 
-useEffect(() => {
- localStorage.setItem("todos", JSON.stringify(todoList));   //local storage a data store korar jonno
-},[todoList]);
-
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todoList)); //local storage a data store korar jonno
+  }, [todoList]);
 
   return (
     <>
@@ -79,7 +84,14 @@ useEffect(() => {
           {/* ----To DO List----- */}
           <div>
             {todoList.map((item, index) => (
-              <TodoItems key={index} Text={item.text} id={item.id} isCompleted={item.isCompleted} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
+              <TodoItems
+                key={index}
+                Text={item.text}
+                id={item.id}
+                isCompleted={item.isCompleted}
+                deleteTodo={deleteTodo}
+                toggleTodo={toggleTodo}
+              />
             ))}
           </div>
         </div>
