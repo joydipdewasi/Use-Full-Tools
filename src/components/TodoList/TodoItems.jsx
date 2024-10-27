@@ -5,7 +5,7 @@ import DeleteIcon from '../../assets/DeleteIcon.gif';
 
 const TodoItems = ({ Text, id, isCompleted, deleteTodo, toggleTodo }) => {
   return (
-    <div className="flex items-center my-3 gap-2">
+    <div className="flex items-center my-2 sm:my-3 gap-2">
       <div
         onClick={() => {
           toggleTodo(id);
@@ -15,10 +15,10 @@ const TodoItems = ({ Text, id, isCompleted, deleteTodo, toggleTodo }) => {
         <img
           src={isCompleted ? CheckMark : blankbox}
           alt="Check Mark"
-          className="w-8 h-8"
+          className="w-6 h-6 sm:w-8 sm:h-8"
         />
         <p
-          className={`text-slate-700 ml-4 text-[17px] decoration-slate-500 ${
+          className={`text-slate-700 ml-3 sm:ml-4 text-sm sm:text-base decoration-slate-500 ${
             isCompleted ? 'line-through' : ''
           }`}
         >
@@ -31,7 +31,7 @@ const TodoItems = ({ Text, id, isCompleted, deleteTodo, toggleTodo }) => {
         }}
         src={DeleteIcon}
         alt="Delete Icon"
-        className="w-7 h-8 cursor-pointer"
+        className="w-6 sm:w-7 h-6 sm:h-8 cursor-pointer"
       />
     </div>
   );
