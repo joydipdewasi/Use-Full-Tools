@@ -109,13 +109,15 @@ const TextEditor = () => {
             >
               Lowercase
             </button>
-            {/* button for  Clear Text */}
+
+            {/* button for  Remove Extra Spaces */}
             <button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
-              onClick={handleClearclick}
+              onClick={handleExtraSpaces}
             >
-              Clear Text
+              Extra Space Remove
             </button>
+
             {/* button for  Copy Text */}
             <button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
@@ -123,12 +125,13 @@ const TextEditor = () => {
             >
               Copy Text
             </button>
-            {/* button for  Remove Extra Spaces */}
+
+            {/* button for  Clear Text */}
             <button
-              className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
-              onClick={handleExtraSpaces}
+              className="border-2 border-red-600  text-white p-1.5 rounded-lg bg-red-500 mx-3 my-2"
+              onClick={handleClearclick}
             >
-              Extra Space Remove
+              Clear Text
             </button>
 
             {/* Your Text Summary */}
