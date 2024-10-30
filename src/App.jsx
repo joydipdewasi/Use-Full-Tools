@@ -9,17 +9,28 @@ function App() {
 
   return (
     <>
-      <div>
+      <div >
+        <div className='bg-red border-4 border-x-sky-500 rounded-lg'>
         <Navber />
-        <div>
+        </div>
+        <div className='bg-red border-4 border-red-500 rounded-lg'>
           <TextEditor />
         </div>
-        <div>
+        <br />
+        <hr className="border-t-4 " />
+        <br />
+        <div className='bg-red border-4 border-green-900 rounded-lg'>
           <TodoList />
         </div>
-        <div>
+        <br />
+        <hr className="border-t-4 "/>
+        <br />
+        <div className='bg-red border-4 border-yellow-500 rounded-lg'>
           <Weather />
         </div>
+        <br />
+        <hr className="border-t-4 "/>
+        <br />
       </div>
     </>
   );
