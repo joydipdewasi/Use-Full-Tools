@@ -1,8 +1,11 @@
 // src/SideNavbar.js
 import React, { useState } from 'react';
+import TextEditor from '../TextEditor/TextEditor';
+import TodoList from '../TodoList/TodoList';
+import Weather from '../Weather/Weather';
 
 
-const SideNavbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -30,22 +33,22 @@ const SideNavbar = () => {
         </div>
         <ul className="mt-20">
           <li>
-            <a href="#" className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
+            <a href="/TextEditor" className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
               Text Editor
             </a>
           </li>
           <li>
-            <a herf="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold ">
+            <a href="/TodoList" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold ">
               To Do List
             </a>
           </li>
           <li>
-            <a herf="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
+            <a href= "Weather" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
               Weather App
             </a>
           </li>
           <li>
-            <a herf="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
+            <a href="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
               Contact
             </a>
           </li>
@@ -62,4 +65,4 @@ const SideNavbar = () => {
   );
 };
 
-export default SideNavbar;
+export default Navbar;
