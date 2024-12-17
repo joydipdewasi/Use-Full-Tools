@@ -33,12 +33,12 @@ const Navbar = () => {
         </div>
         <ul className="mt-20">
           <li>
-            <a href="/TextEditor" className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
+            <a href="/TodoList" className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
               Text Editor
             </a>
           </li>
           <li>
-            <a href="/TodoList" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold ">
+            <a href="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold ">
               To Do List
             </a>
           </li>

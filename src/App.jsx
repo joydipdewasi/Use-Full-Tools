@@ -3,6 +3,7 @@ import Navber from './components/Navber/Navber';
 import TextEditor from './components/TextEditor/TextEditor';
 import TodoList from './components/TodoList/TodoList';
 import Weather from './components/Weather/Weather';
+import PasswordCreator from './components/PasswordCreator/PasswordCreator';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,9 @@ function App() {
         <br />
         <div className="bg-red border-4 border-yellow-500 rounded-lg">
           <Weather />
+        </div>
+        <div className="bg-red border-4 border-yellow-500 rounded-lg">
+          <PasswordCreator />
         </div>
       </div>
     </>
