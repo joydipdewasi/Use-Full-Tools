@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import TextEditor from '../TextEditor/TextEditor';
 import TodoList from '../TodoList/TodoList';
 import Weather from '../Weather/Weather';
-
+import PasswordCreator from '../PasswordCreator/PasswordCreator';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,26 +33,33 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="mt-20">
-          <li>
-            <a href="/TodoList" className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
-              Text Editor
-            </a>
-          </li>
-          <li>
-            <a href="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold ">
-              To Do List
-            </a>
-          </li>
-          <li>
-            <a href= "Weather" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
-              Weather App
-            </a>
-          </li>
-          <li>
-            <a href="#" className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold">
-              Contact
-            </a>
-          </li>
+          <Link
+            to="{/TextEditor}"
+            className="block px-12 py-3 hover:bg-gray-700  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold"
+          >
+            Text Editor
+          </Link>
+
+          <Link
+            to="/TodoList"
+            className="block px-12 py-3 hover:bg-gray-700 cursor-pointer transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold "
+          >
+            To Do List
+          </Link>
+
+          <Link
+            to="/Weather"
+            className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold"
+          >
+            Weather App
+          </Link>
+
+          <Link
+            to="/PasswordCreator"
+            className="block px-12 py-3 hover:bg-gray-700 cursor-pointer  transition-transform duration-300 hover:translate-x-5 hover:text-white hover:text-xl  hover:font-bold"
+          >
+            Password Creator
+          </Link>
         </ul>
       </div>
       <button onClick={toggleNavbar} className=" px-12 ">

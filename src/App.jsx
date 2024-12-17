@@ -29,6 +29,9 @@ function App() {
         <div className="bg-red border-4 border-yellow-500 rounded-lg">
           <Weather />
         </div>
+        <br />
+        <hr className="border-t-4 " />
+        <br />
         <div className="bg-red border-4 border-yellow-500 rounded-lg">
           <PasswordCreator />
         </div>

@@ -63,7 +63,7 @@ const Weather = () => {
 
   return (
     // <div className="">
-    <div className="min-h-screen flex justify-center items-center bg-[#e2d4ff] ">
+    <div className="min-h-screen flex justify-center items-center ">
       <div className="place-self-center p-10 rounded-lg bg-gradient-to-br from-[#ececf5] to-[#4011b6] mt-6 ">
         <p className="text-white text-center">Weather</p>
         <div className="flex justify-center items-center ">

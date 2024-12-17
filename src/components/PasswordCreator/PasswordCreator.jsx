@@ -40,15 +40,15 @@ const PasswordCreator = () => {
 
   return (
     <>
-      <div className="  w-full max-w-md mx-auto shadow-md rounded-lg px-4  py-3 my-8 text-orange-500  bg-gray-800 ">
-        <h1 className="text-2xl text-center cursor-pointer font-bold  hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out">
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 my-6 sm:my-8 md:my-10 text-fuchsia-900  bg-gradient-to-br from-[#f0fcfb] to-[#40a1f5] ">
+        <h1 className="text-2xl text-center cursor-pointer font-bold  hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out ">
           Password Generator
         </h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4 my-3">
           <input
             type="text"
             value={Password}
-            className="w-full px-3 py-1  text-orange-600  bg-gray-300"
+            className="w-full px-3 py-1  text-black  bg-gray-300"
             plasholder="Password"
             readOnly
             rsf={passwordRef}
@@ -57,11 +57,11 @@ const PasswordCreator = () => {
             onClick={copyPasswordToClipboard}
             className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 hover:bg-blue-500 hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out"
           >
-            copy
+            Copy
           </button>
         </div>
         <div className="flex text-sm gap-x-2">
-          <div className="flex item-center gap-x-1">
+          <div className="font-semibold flex item-center gap-x-1">
             <input
               type="range"
               min={6}
@@ -75,7 +75,7 @@ const PasswordCreator = () => {
             <label>Length: {length}</label>
           </div>
           {/* numberAllowed */}
-          <div className="flex items-center gap-x-1">
+          <div className="hover:scale-105 transition ease-in-out font-semibold flex items-center gap-x-1">
             <input
               type="checkbox"
               defaultChecked={numberAllowed}
@@ -87,7 +87,7 @@ const PasswordCreator = () => {
             <label htmlFor="numberInput">Numbers</label>
           </div>
           {/* charAllowed */}
-          <div className="flex items-center gap-x-1">
+          <div className="hover:scale-105 transition ease-in-out font-semibold flex items-center gap-x-1">
             <input
               type="checkbox"
               defaultChecked={charAllowed}
