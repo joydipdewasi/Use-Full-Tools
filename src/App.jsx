@@ -11,28 +11,28 @@ function App() {
   return (
     <>
       <div>
-        <div className="bg-red border-4 border-x-sky-500 rounded-lg">
+        <div>
           <Navber />
         </div>
-        <div className="bg-red border-4 border-red-500 rounded-lg">
+        <div>
           <TextEditor />
         </div>
         <br />
-        <hr className="border-t-4 " />
+        <hr className="border-t-8 " />
         <br />
-        <div className="bg-red border-4 border-green-900 rounded-lg">
+        <div>
           <TodoList />
         </div>
         <br />
-        <hr className="border-t-4 " />
+        <hr className="border-t-8 " />
         <br />
-        <div className="bg-red border-4 border-yellow-500 rounded-lg">
+        <div>
           <Weather />
         </div>
         <br />
-        <hr className="border-t-4 " />
+        <hr className="border-t-8 " />
         <br />
-        <div className="bg-red border-4 border-yellow-500 rounded-lg">
+        <div>
           <PasswordCreator />
         </div>
       </div>
