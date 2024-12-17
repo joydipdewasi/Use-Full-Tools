@@ -4,6 +4,7 @@ import TextEditor from './components/TextEditor/TextEditor';
 import TodoList from './components/TodoList/TodoList';
 import Weather from './components/Weather/Weather';
 import PasswordCreator from './components/PasswordCreator/PasswordCreator';
+import CursorComponent from './components/CursorComponent/CursorComponebt';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
         <div>
           <PasswordCreator />
         </div>
+        <CursorComponent />
       </div>
     </>
   );
