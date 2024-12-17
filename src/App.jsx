@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Navber from './components/Navber/Navber';
+// import Navber from './components/Navber/Navber';
 import TextEditor from './components/TextEditor/TextEditor';
 import TodoList from './components/TodoList/TodoList';
 import Weather from './components/Weather/Weather';
@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <div>
-        <div>
+        {/* <div>
           <Navber />
-        </div>
+        </div> */}
         <div>
           <TextEditor />
         </div>
