@@ -8,6 +8,8 @@ import rain from '../../assets/rain.gif';
 import storm from '../../assets/storm.gif';
 import sun from '../../assets/sun.gif';
 import wind from '../../assets/wind.gif';
+import { motion } from 'framer-motion';
+import { slideup } from '../../animation/animate';
 
 const Weather = () => {
   const inputRef = useRef();
@@ -64,8 +66,8 @@ const Weather = () => {
   return (
     // <div className="">
     <div className="min-h-screen flex justify-center items-center ">
-      <div className="place-self-center p-10 rounded-lg bg-gradient-to-br from-[#ececf5] to-[#4011b6] mt-6 ">
-        <p className="text-white text-center">Weather</p>
+      <motion.div className="place-self-center p-10 rounded-lg bg-gradient-to-br from-[#ececf5] to-[#4011b6] mt-6 ">
+        <motion.p className="text-white text-center">Weather</motion.p>
         <div className="flex justify-center items-center ">
           <input
             ref={inputRef}
@@ -95,22 +97,22 @@ const Weather = () => {
         {/* weather condition */}
         <div className="flex gap-28">
           {/* humidity dev */}
-          <div>
+          <motion.div>
             {/* humidity gif */}
             <span className="text-white text-1xl ">Humidity</span>
             <img className="h-11 " src={humidity} alt="" />
             <p className="text-white mx-2 ">{weatherData.humidity}%</p>
-          </div>
+          </motion.div>
 
           {/* wind div */}
-          <div className="">
+          <motion.div className="">
             {/* wind gif */}
             <span className="text-white text-1xl ">wind</span>
             <img className="h-11 " src={wind} alt="" />
             <p className="text-white  ">{weatherData.windSpeed}km/h</p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
 
     // </div>

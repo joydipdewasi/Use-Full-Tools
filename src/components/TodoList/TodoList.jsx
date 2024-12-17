@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TOdoList from '../../assets/TodoList.gif';
 import TodoItems from './TodoItems';
+import { motion } from 'framer-motion';
+import { slideLeft } from '../../animation/animate';
 
 const TodoList = () => {
   // Reference for the input element
@@ -58,12 +60,18 @@ const TodoList = () => {
 
   return (
     <>
-      <div className=" grid py-4 min-h-screen">
+      <motion.div className=" grid py-4 min-h-screen">
         <div className="bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl shadow-2xl ease-in-out border border-gray-300 md:min-h-[550px] ">
           {/* -----title----- */}
           <div className="flex items-center mt-5 md:mt-7 gap-2">
-            <img src={TOdoList} alt="Add Icon" className="w-10 h-10 sm:w-12 sm:h-12" />
-            <h1 className="text-2xl sm:text-3xl font-semibold">TO-DO List</h1>
+            <motion.img
+              src={TOdoList}
+              alt="Add Icon"
+              className="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <motion.h1 className="text-2xl sm:text-3xl font-semibold">
+              TO-DO List
+            </motion.h1>
           </div>
           {/* -----input box----- */}
           <div className="flex sm:flex-row items-center my-5 sm:my-7 bg-gray-200 rounded-full">
@@ -73,16 +81,16 @@ const TodoList = () => {
               type="text"
               placeholder="Add a new task"
             />
-            <button
+            <motion.button
               onClick={add}
               className="bg-green-500 border-none rounded-full w-full sm:w-32 h-12 sm:h-14 text-white text-sm sm:text-lg font-medium cursor-pointer  sm:mt-0 sm:ml-2"
             >
               Add Task
-            </button>
+            </motion.button>
           </div>
-
           {/* ----To DO List----- */}
-          <div className='overflow-y-auto max-h-80'>
+
+          <motion.div className="overflow-y-auto max-h-80">
             {todoList.map((item, index) => (
               <TodoItems
                 key={index}
@@ -93,9 +101,9 @@ const TodoList = () => {
                 toggleTodo={toggleTodo}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

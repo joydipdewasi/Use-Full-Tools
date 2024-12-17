@@ -1,4 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { slideup } from '../../animation/animate';
 
 const PasswordCreator = () => {
   const [length, setLength] = useState(0);
@@ -41,9 +43,9 @@ const PasswordCreator = () => {
   return (
     <>
       <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 my-6 sm:my-8 md:my-10 text-fuchsia-900  bg-gradient-to-br from-[#f0fcfb] to-[#40a1f5] ">
-        <h1 className="text-2xl text-center cursor-pointer font-bold  hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out ">
+        <motion.h1 className="text-2xl text-center cursor-pointer font-bold  hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out ">
           Password Generator
-        </h1>
+        </motion.h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4 my-3">
           <input
             type="text"
@@ -60,7 +62,7 @@ const PasswordCreator = () => {
             Copy
           </button>
         </div>
-        <div className="flex text-sm gap-x-2">
+        <motion.div className="flex text-sm gap-x-2">
           <div className="font-semibold flex item-center gap-x-1">
             <input
               type="range"
@@ -98,7 +100,7 @@ const PasswordCreator = () => {
             />
             <label htmlFor="characterInput">Characters</label>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

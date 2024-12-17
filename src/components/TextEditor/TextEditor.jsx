@@ -1,6 +1,7 @@
 // src/components/Layout.js
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
+import { slideup } from '../../animation/animate';
 const TextEditor = () => {
   // Text uppercase useState
 
@@ -78,12 +79,14 @@ const TextEditor = () => {
           {/* HOME DIV    style={myStyle} */}
           <div id="home" className="h-screen bg-white shadow-md mb-6 p-4 ">
             <div className="mx-12 my-9 ">
-              <h1 className="text-3xl font-bold mb-2">Text Editor</h1>
-              <p>This is the Text Editor content.</p>
+              <motion.h1 className="text-3xl font-bold mb-2">
+                Text Editor
+              </motion.h1>
+              <motion.p>This is the Text Editor content.</motion.p>
             </div>
             {/* text written div */}
             {/* style={myStyle} */}
-            <div className="min-h-50 flex items-center justify-center bg-gray-100 p-4">
+            <motion.div className="min-h-50 flex items-center justify-center bg-gray-100 p-4">
               <div className="bg-white p-2.5 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-full  overflow-y-auto">
                 <textarea
                   id="myBox" //style={myStyle}
@@ -94,49 +97,51 @@ const TextEditor = () => {
                   onChange={handleonChange}
                 ></textarea>
               </div>
-            </div>
+            </motion.div>
             {/* button for  Uppercase */}
-            <button
+            <motion.button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
               onClick={handleUpclick}
             >
               Uppercase
-            </button>
+            </motion.button>
             {/* button for  Lowercase */}
-            <button
+            <motion.button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
               onClick={handleLoclick}
             >
               Lowercase
-            </button>
+            </motion.button>
 
             {/* button for  Remove Extra Spaces */}
-            <button
+            <motion.button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
               onClick={handleExtraSpaces}
             >
               Extra Space Remove
-            </button>
+            </motion.button>
 
             {/* button for  Copy Text */}
-            <button
+            <motion.button
               className="border-2 border-sky-500  text-white p-1.5 rounded-lg bg-sky-400 mx-3 my-2"
               onClick={handleCopy}
             >
               Copy Text
-            </button>
+            </motion.button>
 
             {/* button for  Clear Text */}
-            <button
+            <motion.button
               className="border-2 border-red-600  text-white p-1.5 rounded-lg bg-red-500 mx-3 my-2"
               onClick={handleClearclick}
             >
               Clear Text
-            </button>
+            </motion.button>
 
             {/* Your Text Summary */}
             <div className="mx-5  ">
-              <h2 className="text-1xl font-bold ">Your Text Summary</h2>
+              <motion.h2 className="text-1xl font-bold ">
+                Your Text Summary
+              </motion.h2>
               <p className="">
                 {Text.split(' ').length} words and {Text.length} characters
               </p>
