@@ -28,14 +28,17 @@ function App() {
         <hr className="border-t-8 " />
         <br />
         <div>
-          <Weather />
+          <PasswordCreator />
         </div>
         <br />
         <hr className="border-t-8 " />
         <br />
         <div>
-          <PasswordCreator />
+          <Weather />
         </div>
+        <br />
+        <hr className="border-t-8 " />
+        <br />
         <CursorComponent />
       </div>
     </>
